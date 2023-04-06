@@ -1,15 +1,15 @@
 <section class="app">
   <h1>Listado de Peliculas</h1>
   <form class="search">
-    <input type="text" #searchMovieInput placeholder="Buscar..." />
-    <button type="button" (click)="searchMovie(searchMovieInput.value)">
-      Search Movie
-    </button>
+    <input type="text" placeholder="Buscar..." #searchInputMovie />
   </form>
-  <div class="container" *ngIf="moviesFounded$ | async as movies">
+  <div class="container" *ngIf="moviesFounded$ | async as movies; else empty">
     <app-card-movie
       *ngFor="let movie of movies"
       [movie]="movie"
     ></app-card-movie>
   </div>
+  <ng-template #empty>
+    <p>No hay peliculas capo</p>
+  </ng-template>
 </section>
