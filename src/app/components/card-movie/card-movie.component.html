@@ -1,10 +1,10 @@
 <div>
-  <span>year</span>
+  <span>{{ movie.Year }}</span>
   <div>
-    <img src="" alt="movie-picture" />
+    <img src="{{ getImageNotFound() }}" alt="movie-picture" />
   </div>
   <div>
-    <h4>movie title</h4>
-    <p>movie type</p>
+    <h4>{{ movie.Title }}</h4>
+    <p>{{ movie.Type }}</p>
   </div>
 </div>

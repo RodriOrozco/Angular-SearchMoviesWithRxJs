@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { Movie } from '../interfaces/movie.interface';
+import { Observable, map, tap } from 'rxjs';
+import { ApiInfoMovie, Movie } from '../interfaces/movie.interface';
 
 @Injectable()
 export class MoviesService {
@@ -11,7 +11,9 @@ export class MoviesService {
 
   constructor(private http: HttpClient) {}
 
-  getMovieByTerm(searchTerm: string): Observable<any> {
-    return this.http.get(`${this.API_URL}&s=${searchTerm}`);
+  getMovieByTerm(searchTerm: string): Observable<Movie[]> {
+    return this.http
+      .get<ApiInfoMovie>(`${this.API_URL}&s=${searchTerm}`)
+      .pipe(map((data) => data.Search));
   }
 }

@@ -1,3 +1,9 @@
+export interface ApiInfoMovie {
+  Response: string;
+  Search: Movie[];
+  totalResults: string;
+}
+
 export interface Movie {
   Title: string;
   Year: string;
