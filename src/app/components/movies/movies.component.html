@@ -1,9 +1,17 @@
-<div class="app">
+<section class="app">
   <h1>Listado de Peliculas</h1>
-  <form class="search" action="">
-    <input type="text" placeholder="Buscar..." />
+  <form class="search">
+    <!-- <form class="search"> -->
+    <input type="text" #searchMovieInput placeholder="Buscar..." />
+    <button type="button" (click)="searchMovie(searchMovieInput.value)">
+      Search Movie
+    </button>
   </form>
   <div class="container">
     <app-card-movie></app-card-movie>
   </div>
+</section>
+
+<div *ngIf="moviesFounded$ | async">
+  {{ moviesFounded$ | async | json }}
 </div>
