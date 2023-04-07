@@ -7,10 +7,19 @@ import { MoviesComponent } from './components/movies/movies.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { MoviesService } from './services/movies.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [AppComponent, CardMovieComponent, MoviesComponent],
-  imports: [BrowserModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    //Angular Material modules
+    MatCardModule,
+  ],
   providers: [MoviesService],
   bootstrap: [AppComponent],
 })

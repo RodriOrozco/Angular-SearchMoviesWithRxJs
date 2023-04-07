@@ -1,10 +1,8 @@
-<div>
-  <span>{{ movie.Year }}</span>
-  <div>
-    <img src="{{ getImageNotFound() }}" alt="movie-picture" />
-  </div>
-  <div>
-    <h4>{{ movie.Title }}</h4>
-    <p>{{ movie.Type }}</p>
-  </div>
-</div>
+<mat-card class="movie-card">
+  <span class="movie-card__year">{{ movie.Year }}</span>
+  <img mat-card-image src="{{ getImageNotFound() }}" alt="movie-picture" />
+  <mat-card-content>
+    <mat-card-title>{{ movie.Title }}</mat-card-title>
+    <mat-card-subtitle>{{ movie.Type }}</mat-card-subtitle>
+  </mat-card-content>
+</mat-card>
