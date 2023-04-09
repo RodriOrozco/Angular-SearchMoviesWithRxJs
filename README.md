@@ -5,7 +5,8 @@
 ### Built with
 
 - Angular
-- Sass
+- Angular material
+- Less
 - Flexbox
 - TypeScript
 - Semantic HTML5 markup
