@@ -10,6 +10,7 @@ import { MoviesService } from './services/movies.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatCardModule } from '@angular/material/card';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [AppComponent, CardMovieComponent, MoviesComponent],
@@ -19,6 +20,7 @@ import { MatCardModule } from '@angular/material/card';
     BrowserAnimationsModule,
     //Angular Material modules
     MatCardModule,
+    MatInputModule,
   ],
   providers: [MoviesService],
   bootstrap: [AppComponent],

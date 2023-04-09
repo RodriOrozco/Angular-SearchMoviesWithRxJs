@@ -1,8 +1,9 @@
 <section class="app">
-  <h1>Listado de Peliculas</h1>
-  <form class="app__search">
-    <input type="text" placeholder="Buscar..." #searchInputMovie />
-  </form>
+  <h1 class="app__title">Listado de Peliculas</h1>
+  <mat-form-field class="app__search">
+    <mat-label>Buscador de Peliculas</mat-label>
+    <input matInput type="text" placeholder="Buscar..." #searchInputMovie />
+  </mat-form-field>
   <div class="movies-message">
     <div
       class="movies-message__container-cards"
@@ -14,7 +15,7 @@
       ></app-card-movie>
     </div>
     <ng-template #empty class="movies-message__not-found">
-      <p>no hay pelicualas</p>
+      <p>no hay peliculas</p>
     </ng-template>
   </div>
 </section>

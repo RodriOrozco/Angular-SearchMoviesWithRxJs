@@ -1,11 +1,11 @@
 .movies-message{
     width: 100%;
-    min-height: 100%;
+    min-height: 50vh;
     padding: 1rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
+    
     &__container-cards {
         width: 100%;
         display: flex;
@@ -15,6 +15,21 @@
     }
 }
 
+.__not-found{
+    background-color: #b3b3b3;
+    text-transform: uppercase;
+}
+
 .app{
     padding: 2rem;
+
+    &__title{
+        font-weight: bolder;
+        text-transform: uppercase;
+        color: #b3b3b3;
+    }
+
+    &__search{
+        width: 80%;
+    }
 }
